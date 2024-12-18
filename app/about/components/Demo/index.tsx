@@ -1,7 +1,7 @@
 "use client";
 
 import classNames from "classnames";
-import { useCommonStore } from "@/app/store";
+import { useCommonStore } from "@/app/context";
 import styles from "./index.module.scss";
 
 interface IDemo {
@@ -9,7 +9,7 @@ interface IDemo {
 }
 export const Demo: React.FC<IDemo> = (props) => {
   const { name } = props;
-  const { name: title } = useCommonStore();
+  const { name: title } = useCommonStore((state) => state);
   return (
     <div className={classNames(styles.demo)}>
       {name} {title}
