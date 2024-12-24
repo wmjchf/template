@@ -1,15 +1,18 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-
+import { Demo } from "../components/Demo";
+import { ConfirmWallet } from "../components/Login/ConfirmWallet";
+import { ConnectWallet } from "../components/Login/ConnectWallet";
 function Page() {
   return (
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
+        display: "flex",
+        justifyContent: "flex-end",
         padding: 12,
       }}
     >
-      <ConnectButton />
+      <ConnectWallet>11</ConnectWallet>
+      <ConfirmWallet></ConfirmWallet>
+      <Demo></Demo>
     </div>
   );
 }

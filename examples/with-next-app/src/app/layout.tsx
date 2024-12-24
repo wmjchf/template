@@ -1,12 +1,12 @@
-import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
-import { Providers } from './providers';
+import "@rainbow-me/rainbowkit/styles.css";
+import { WalletProvider } from "../rainbowkit/WalletProvider";
+import "../styles/global.css";
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <WalletProvider>{children}</WalletProvider>
       </body>
     </html>
   );
